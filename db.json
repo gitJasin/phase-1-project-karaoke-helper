@@ -1,0 +1,54 @@
+{
+    "songs": [
+        {
+            "bandName": "Radiohead",
+            "bandLikes": 0,
+            "songs": {
+                "song1": "Karma Police",
+                "songLikes": 0
+            },
+            "video": "",
+            "lyrics": ""
+        },
+        {
+            "bandName": "Snoop Dogg",
+            "bandLikes": 0,
+            "songs": {
+                "song1": "Who Am I (What's My Name)",
+                "songLikes": 0
+            },
+            "video": "",
+            "lyrics": ""
+        },
+        {
+            "bandName": "Queen",
+            "bandLikes": 0,
+            "songs": {
+                "song1": "Bohemian Rhapsody",
+                "songLikes": 0
+            },
+            "video": "",
+            "lyrics": ""
+        },
+        {
+            "bandName": "Weezer",
+            "bandLikes": 0,
+            "songs": {
+                "song1": "Undone (The Sweater Song)",
+                "songLikes": 0
+            },
+            "video": "",
+            "lyrics": ""
+        },
+        {
+            "bandName": "The Beatles",
+            "bandLikes": 0,
+            "songs": {
+                "song1": "All You Need Is Love",
+                "songLikes": 0
+            },
+            "video": "",
+            "lyrics": ""
+        }
+    ]
+}
