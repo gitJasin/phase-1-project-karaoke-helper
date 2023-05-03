@@ -1,7 +1,7 @@
 {
-    "songs": [
+    "bands": [
         {
-            "bandName": "Radiohead",
+            "name": "Radiohead",
             "bandLikes": 0,
             "songs": {
                 "song1": "Karma Police",
