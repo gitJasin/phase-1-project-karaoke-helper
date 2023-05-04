@@ -4,11 +4,11 @@ function renderBandNames (band) {
     let bandName = document.createElement("div")
     bandName.classList.add("band-name-element")
     
-    let h2 = document.createElement("h2")
-    h2.textContent = band.name
+    let h3 = document.createElement("h3")
+    h3.textContent = band.name
 
-    document.querySelector(".band-names-list").appendChild(bandName)
-    document.querySelector(".band-name-element").append(h2)
+    document.querySelector(".band-names-list").append(bandName)
+    document.querySelector(".band-name-element").appendChild(h3)
 }
 
 // Fetches
