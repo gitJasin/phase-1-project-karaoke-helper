@@ -1,19 +1,19 @@
 
 // Render to DOM Functions
-function renderBandNames (songs) {
+function renderBandNames (band) {
     let bandName = document.createElement("div")
     bandName.classList.add("band-name-element")
     
     let h3 = document.createElement("h3")
-    h3.textContent = songs.band
+    h3.textContent = band.band
 
-    document.querySelector(".band-names-list").append(bandName)
-    document.querySelector(".band-name-element").appendChild(h3)
+    bandName.appendChild(h3)
+    document.querySelector(".band-scroller").append(bandName)
 }
 
 // Fetches
 function getAllBandNames () {
-    fetch("http://localhost:3000/bands")
+    fetch("http://localhost:3000/songs")
         .then(res => res.json())
         .then(songs => songs.forEach(band => renderBandNames(band)))
 }
