@@ -31,41 +31,35 @@
             <li>band 3</li>
         </ul>
     </section> 
-    <section>
-    <!-- Find a band, scroll sideways through band catalog, alphabetically. Ideally have A-Z on top to speed up the process. It will render band names from db,json FUN IDEA: maybe try to have a cool image of the band name?--> 
+    <!-- NOT SURE IF I'M KEEPING THIS <section>
+    Find a band, scroll sideways through band catalog, alphabetically. Ideally have A-Z on top to speed up the process. It will render band names from db,json FUN IDEA: maybe try to have a cool image of the band name? 
         <h2>Find a Band</h2>
         <div class="band-scroller">
-            <!-- Populate with band names form db.json EXAMPLE:
+            Populate with band names form db.json EXAMPLE:
             <div class="band-name-element">
                     
             </div>
-            -->
+           
         </div>
-    </section>
+    </section> -->
     <section>
-    <!-- After band is clicked above, displays band name and list of songs. Will also have button next to song to add it to the sing queue -->
+    <!-- Scroll Through Song Cards. Displays band image on top, band name, song name, song likes button, band likes button, and more details button-->
         <h2>Find a song</h2>
         <div class="song-scroller">
             
         </div>
     </section>
     <section>
-    <!-- After song title is clicked displays song lyrics and video, click agian to hide-->
-        <h2>Lyrics</h2>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                In nibh mauris cursus mattis molestie a iaculis. 
-                Fames ac turpis egestas integer. 
-                In cursus turpis massa tincidunt dui ut. 
-                Sit amet dictum sit amet.
-                oooo
-                ooooooo
-                ooooooo
-                ooo rsdu
-            </p>
-        <h2>Video</h2>
-            <iframe src="" frameborder="0"></iframe>
+    <!-- Song Details. After more details button is clicked,  displays song lyrics and video, click agian to hide-->
+        <div id="song-details">
+            <h2 class="song-name">Song name goes here</h2>
+            <h3 class="song-video">Song video goes here</h3>
+            <h3 class="song-lyrics">Click link to get lyrics</h3>
+        </div>
+
+        <h3>Likes</h3>
+        <p id="song-likes">Song likes: </p>
+        <p id="band-likes">Band likes: </p>
     </section>
     <section>
     <!-- Form for adding suggested songs to the catalog -->

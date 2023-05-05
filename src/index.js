@@ -1,18 +1,19 @@
 
 // Render to DOM Functions
 //===========================================================
-function renderBandNames (band) {
-    let bandName = document.createElement("div")
-    bandName.classList.add("band-name-element")
+// NOT SURE IF I WILL USE THIS 
+// function renderBandNames (band) {
+//     let bandName = document.createElement("div")
+//     bandName.classList.add("band-name-element")
     
-    let h3 = document.createElement("h3")
-    h3.textContent = band.band
+//     let h3 = document.createElement("h3")
+//     h3.textContent = band.band
 
-    bandName.appendChild(h3)
-    document.querySelector(".band-scroller").append(bandName)
-}
+//     bandName.appendChild(h3)
+//     document.querySelector(".band-scroller").append(bandName)
+// }
 
-function renderSongNames (song) {
+function createSongCard (song) {
     let songName = document.createElement("div")
     songName.classList.add("song-name-element")
 
@@ -25,22 +26,23 @@ function renderSongNames (song) {
 
 // Fetches
 //===========================================================
-function getAllBandNames () {
-    fetch("http://localhost:3000/songs")
-        .then(res => res.json())
-        .then(songs => songs.forEach(band => renderBandNames(band)))
-}
+// NOT SURE IF I WILL USE THIS
+// function getAllBandNames () {
+//     fetch("http://localhost:3000/songs")
+//         .then(res => res.json())
+//         .then(songs => songs.forEach(band => renderBandNames(band)))
+// }
 
 function getAllSongs () {
     fetch("http://localhost:3000/songs")
     .then(res => res.json())
-    .then(songs => songs.forEach(song => renderSongNames(song)))
+    .then(songs => songs.forEach(song => createSongCard(song)))
 }
 
 // Initial Render
 //===========================================================
 function intialize () {
-    getAllBandNames()
+    // getAllBandNames()
     getAllSongs()
 }
 intialize()
