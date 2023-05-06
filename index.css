@@ -1,5 +1,40 @@
 
+@import "https://unpkg.com/open-props";
+@import "https://unpkg.com/open-props/normalize.min.css";
+
+@use postcss-preset-env;
+
+.song-card {
+flex-basis: var(--size-content);
+display: flex;
+flex-direction: column;
+gap: var(--size-2);
+background: var(--surface-3);
+border: 1px solid var(--surface-1);
+padding: var(--size-4);
+border-radius: var(--radius-3);
+box-shadow: var(--shadow-2)
+}
+
+
+.song-card > img {
+    inline-size: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+.song-scroller {
+    display: grid;
+    gap: var(--size-3);
+    grid-auto-flow: column;
+    grid-auto-columns: 23%;
+
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+}
+
+
+
 .band-image {
-padding: 5px;
-width: 150px;
+    padding: 5px;
+    width: 150px;
 }
