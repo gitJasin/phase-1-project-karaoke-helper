@@ -1,18 +1,6 @@
 
 // Render to DOM Functions
 //===========================================================
-// NOT SURE IF I WILL USE THIS 
-// function renderBandNames (band) {
-//     let bandName = document.createElement("div")
-//     bandName.classList.add("band-name-element")
-    
-//     let h3 = document.createElement("h3")
-//     h3.textContent = band.band
-
-//     bandName.appendChild(h3)
-//     document.querySelector(".band-scroller").append(bandName)
-// }
-
 function createSongCard (song) {
      let card = document.createElement("div")
     card.classList.add("song-card")
@@ -53,13 +41,6 @@ function createSongCard (song) {
 
 // Fetches
 //===========================================================
-// NOT SURE IF I WILL USE THIS
-// function getAllBandNames () {
-//     fetch("http://localhost:3000/songs")
-//         .then(res => res.json())
-//         .then(songs => songs.forEach(band => renderBandNames(band)))
-// }
-
 function getAllSongs () {
     fetch("http://localhost:3000/songs")
     .then(res => res.json())
