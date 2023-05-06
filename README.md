@@ -58,3 +58,6 @@ Artist name and songs available,
 
 - Unsure what to sing, or want to challenge yourself? Click the random song button!
 
+## Sources:
+- CSS styling of card-scroller: 
+  - [Kevin Powell]. Create a horizontal media scroller with CSS [Video]. Youtube. https://youtu.be/3yfswsnD2sw
