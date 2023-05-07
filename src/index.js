@@ -64,6 +64,7 @@ function shoeMoreSongInfo (song) {
     let showLyricsLink = document.querySelector(".song-lyrics")
     showLyricsLink.classList.add("show-lyrics-link")
     showLyricsLink.setAttribute("href", song.lyrics)
+    // showLyricsLink.textContent = song.lyrics
 }
 // Event Listener Functions
 //===========================================================
