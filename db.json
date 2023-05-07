@@ -7,7 +7,7 @@
             "bandImage": "https://upload.wikimedia.org/wikipedia/en/5/55/Radioheadthebends.png",
             "songLikes": 0,
             "bandLikes": 0,
-            "video": "https://youtu.be/1uYWYWPc9HU",
+            "video": "https://www.youtube.com/embed/1uYWYWPc9HU",
             "lyrics": "https://www.azlyrics.com/lyrics/radiohead/karmapolice.html"
         },
         {   
@@ -17,7 +17,7 @@
             "bandImage": "https://upload.wikimedia.org/wikipedia/commons/1/17/Snoop_Dogg_2019_by_Glenn_Francis.jpg",
             "songLikes": 0,
             "bandLikes": 0,
-            "video": "https://youtu.be/2soGJXQAQec",
+            "video": "https://youtube.com/embed/2soGJXQAQec",
             "lyrics": "https://www.azlyrics.com/lyrics/snoopdogg/whoamiwhatsmyname.html"
         },
         {
@@ -27,7 +27,7 @@
             "bandImage": "https://upload.wikimedia.org/wikipedia/commons/3/33/Queen_%E2%80%93_montagem_%E2%80%93_new.png",
             "songLikes": 0,
             "bandLikes": 0,
-            "video": "https://youtu.be/fJ9rUzIMcZQ",
+            "video": "https://youtube.com/embed/fJ9rUzIMcZQ",
             "lyrics": "https://www.azlyrics.com/lyrics/queen/bohemianrhapsody.html"
         },
         {   
@@ -37,7 +37,7 @@
             "bandImage": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Weezer_Bethlehem_2019_1.jpg",
             "songLikes": 0,
             "bandLikes": 0,
-            "video": "https://youtu.be/LHQqqM5sr7g",
+            "video": "https://youtube.com/embed/LHQqqM5sr7g",
             "lyrics": "https://www.azlyrics.com/lyrics/weezer/undonethesweatersong.html"
             
         },
@@ -48,7 +48,7 @@
             "bandImage": "https://upload.wikimedia.org/wikipedia/commons/d/df/The_Fabs.JPG",
             "songLikes": 0,
             "bandLikes": 0,
-            "video": "https://youtu.be/_7xMfIp-irg",
+            "video": "https://youtube.com/embed/_7xMfIp-irg",
             "lyrics": "https://www.azlyrics.com/lyrics/beatles/allyouneedislove.html"
         }
     ]

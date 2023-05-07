@@ -35,7 +35,7 @@ function createSongCard (song) {
     let moreInfo = document.createElement("p")
     moreInfo.classList.add("more-info")
     moreInfo.textContent = "More Info >>"
-    moreInfo.addEventListener("click", () => console.log("clicked"))
+    moreInfo.addEventListener("click", () => shoeMoreSongInfo(song))
 
     // let queueSpan = document.createElement("span")
     let songSpan = document.createElement("span")
@@ -48,9 +48,25 @@ function createSongCard (song) {
     document.querySelector(".song-scroller").append(card)
 }
 
+function shoeMoreSongInfo (song) {
+    let showbandName = document.querySelector(".band-name")
+    showbandName.classList.add("show-band-name")
+    showbandName.textContent = song.band
+
+    let showSongName = document.querySelector(".song-name")
+    showSongName.classList.add("show-song-name")
+    showSongName.textContent = song.song
+
+    let showSongVideo = document.querySelector(".song-video")
+    showSongVideo.classList.add("show-song-video")
+    showSongVideo.src = song.video
+    
+    let showLyricsLink = document.querySelector(".song-lyrics")
+    showLyricsLink.classList.add("show-lyrics-link")
+    showLyricsLink.setAttribute("href", song.lyrics)
+}
 // Event Listener Functions
 //===========================================================
-
 
 // Fetches
 //===========================================================
