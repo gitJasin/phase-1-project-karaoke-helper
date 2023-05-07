@@ -69,12 +69,13 @@ function displayMoreSongInfo (song) {
 
 function displaySongQueue (song) {
     let span = document.createElement("span")
-    let li = document.createElement("li")
-    let deleteBtn = document.createAttribute("button")
-
     span.textContent = `${song.song} - ${song.band}  `
-    deleteBtn.textContent = "🗑️"
 
+    let li = document.createElement("li")
+
+    let deleteBtn = document.createElement("button")
+    deleteBtn.innerHTML = "🗑️"
+    
     span.appendChild(deleteBtn)
     li.appendChild(span)
     document.querySelector(".song-queue").appendChild(li)
