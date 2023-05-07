@@ -30,12 +30,12 @@ function createSongCard (song) {
     let addToQueueBtn = document.createElement("button")
     addToQueueBtn.classList.add("buttons")
     addToQueueBtn.textContent = "Sing!"
-    addToQueueBtn.addEventListener("click", () => console.log("clicked"))
+    addToQueueBtn.addEventListener("click", () => displaySongQueue(song))
 
     let moreInfo = document.createElement("p")
     moreInfo.classList.add("more-info")
     moreInfo.textContent = "More Info >>"
-    moreInfo.addEventListener("click", () => shoeMoreSongInfo(song))
+    moreInfo.addEventListener("click", () => displayMoreSongInfo(song))
 
     // let queueSpan = document.createElement("span")
     let songSpan = document.createElement("span")
@@ -48,7 +48,7 @@ function createSongCard (song) {
     document.querySelector(".song-scroller").append(card)
 }
 
-function shoeMoreSongInfo (song) {
+function displayMoreSongInfo (song) {
     let showbandName = document.querySelector(".band-name")
     showbandName.classList.add("show-band-name")
     showbandName.textContent = song.band
@@ -65,6 +65,19 @@ function shoeMoreSongInfo (song) {
     showLyricsLink.classList.add("show-lyrics-link")
     showLyricsLink.setAttribute("href", song.lyrics)
     // showLyricsLink.textContent = song.lyrics
+}
+
+function displaySongQueue (song) {
+    let span = document.createElement("span")
+    let li = document.createElement("li")
+    let deleteBtn = document.createAttribute("button")
+
+    span.textContent = `${song.song} - ${song.band}  `
+    deleteBtn.textContent = "🗑️"
+
+    span.appendChild(deleteBtn)
+    li.appendChild(span)
+    document.querySelector(".song-queue").appendChild(li)
 }
 // Event Listener Functions
 //===========================================================
