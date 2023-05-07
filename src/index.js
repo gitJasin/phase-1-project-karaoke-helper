@@ -10,21 +10,21 @@ function createSongCard (song) {
     image.src = song.bandImage
 
     let songP = document.createElement("p")
-    songP.classList.add("card-p")
+    songP.classList.add("song=p")
     songP.textContent = song.song
 
     let bandP = document.createElement("p")
     bandP.textContent = song.band
-    bandP.classList.add("card-p")
+    bandP.classList.add("band-p")
 
     let bandLikeBtn = document.createElement("button")
     bandLikeBtn.classList.add("buttons")
-    bandLikeBtn.textContent = "Like ❤️"
+    bandLikeBtn.textContent = "Like Band ❤️"
     bandLikeBtn.addEventListener("click", () => console.log("clicked"))
 
     let songLikeBtn = document.createElement("button")
     songLikeBtn.classList.add("buttons")
-    songLikeBtn.textContent = "Like ❤️"
+    songLikeBtn.textContent = "Like Song ❤️"
     songLikeBtn.addEventListener("click", () => console.log("clicked"))
 
     let addToQueueBtn = document.createElement("button")
@@ -37,14 +37,14 @@ function createSongCard (song) {
     moreInfo.textContent = "More Info >>"
     moreInfo.addEventListener("click", () => console.log("clicked"))
 
-    let queueSpan = document.createElement("span")
+    // let queueSpan = document.createElement("span")
     let songSpan = document.createElement("span")
     let bandSpan = document.createElement("span")
     
-    queueSpan.appendChild(addToQueueBtn)
+    // queueSpan.appendChild(addToQueueBtn)
     songSpan.appendChild(songLikeBtn)
     bandSpan.appendChild(bandLikeBtn)
-    card.append(image, bandP, bandSpan, songP, songSpan, queueSpan, moreInfo)
+    card.append(image, bandP, bandSpan, songP, songSpan, addToQueueBtn, moreInfo)
     document.querySelector(".song-scroller").append(card)
 }
 

@@ -47,6 +47,14 @@ button:focus, button:hover {
     cursor: pointer;
 }
 
+.song-p {
+    font-weight: 500;
+    color: var(--gray-4);
+}
+.band-p {
+    font-weight: 500;
+    color: var(--gray-4);
+}
 /* Thanks to:
 [Kevin Powell]. Create a horizontal media scroller with CSS [Video]. Youtube. https://youtu.be/3yfswsnD2sw
 for the song scroller css
