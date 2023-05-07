@@ -9,14 +9,13 @@ function createSongCard (song) {
     image.classList.add("band-image")
     image.src = song.bandImage
 
-    let h3 = document.createElement("h3")
-    h3.textContent = song.song
+    let songP = document.createElement("p")
+    songP.classList.add("card-p")
+    songP.textContent = song.song
 
-    let h4 = document.createElement("h4")
-    h4.textContent = song.band
-
-    let bandNameDiv = document.createElement("div")
-    let songNameDiv = document.createElement("div")
+    let bandP = document.createElement("p")
+    bandP.textContent = song.band
+    bandP.classList.add("card-p")
 
     let bandLikeBtn = document.createElement("button")
     bandLikeBtn.classList.add("buttons")
@@ -45,8 +44,7 @@ function createSongCard (song) {
     queueSpan.appendChild(addToQueueBtn)
     songSpan.appendChild(songLikeBtn)
     bandSpan.appendChild(bandLikeBtn)
-    bandNameDiv.append()
-    card.append(image, h4, h3, bandSpan, songSpan, queueSpan, moreInfo)
+    card.append(image, bandP, bandSpan, songP, songSpan, queueSpan, moreInfo)
     document.querySelector(".song-scroller").append(card)
 }
 
