@@ -13,28 +13,53 @@ background: var(--surface-3);
 border: 1px solid var(--surface-1);
 padding: var(--size-4);
 border-radius: var(--radius-3);
-box-shadow: var(--shadow-2)
+box-shadow: var(--shadow-4)
 }
-
 
 .song-card > img {
     inline-size: 100%;
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 4 / 3;
     object-fit: cover;
 }
+
+.buttons {
+    border: none;
+    padding: 6px 12px;
+    border-radius: 50px;
+
+    font-weight: 600;
+    color: var(--lime-5);
+    background-color: var(--blue-8);
+    box-shadow: 0 1px 0 var(--gray-11);
+    transition: all 200ms ease-in-out;
+    cursor: pointer;
+}
+
+button:focus, button:hover {
+    background-color: var(--lime-5);
+    color: var(--blue-8); 
+}
+
+.more-info {
+    font-weight: 600;
+    color: var(--lime-5);
+    text-shadow:0 2px 0 var(--gray-11);
+    cursor: pointer;
+}
+
+/* Thanks to:
+[Kevin Powell]. Create a horizontal media scroller with CSS [Video]. Youtube. https://youtu.be/3yfswsnD2sw
+for the song scroller css
+*/
+
 .song-scroller {
     display: grid;
     gap: var(--size-3);
     grid-auto-flow: column;
     grid-auto-columns: 23%;
 
+    padding: 3vh;
+
     overflow-x: auto;
     overscroll-behavior-inline: contain;
-}
-
-
-
-.band-image {
-    padding: 5px;
-    width: 150px;
 }

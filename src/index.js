@@ -2,7 +2,7 @@
 // Render to DOM Functions
 //===========================================================
 function createSongCard (song) {
-     let card = document.createElement("div")
+    let card = document.createElement("div")
     card.classList.add("song-card")
     
     let image = document.createElement("img")
@@ -15,18 +15,21 @@ function createSongCard (song) {
     let h4 = document.createElement("h4")
     h4.textContent = song.band
 
+    let bandNameDiv = document.createElement("div")
+    let songNameDiv = document.createElement("div")
+
     let bandLikeBtn = document.createElement("button")
-    bandLikeBtn.classList.add("band-like-btn")
+    bandLikeBtn.classList.add("buttons")
     bandLikeBtn.textContent = "Like ❤️"
     bandLikeBtn.addEventListener("click", () => console.log("clicked"))
 
     let songLikeBtn = document.createElement("button")
-    songLikeBtn.classList.add("song-like-btn")
+    songLikeBtn.classList.add("buttons")
     songLikeBtn.textContent = "Like ❤️"
     songLikeBtn.addEventListener("click", () => console.log("clicked"))
 
     let addToQueueBtn = document.createElement("button")
-    addToQueueBtn.classList.add("add-queue-btn")
+    addToQueueBtn.classList.add("buttons")
     addToQueueBtn.textContent = "Sing!"
     addToQueueBtn.addEventListener("click", () => console.log("clicked"))
 
@@ -35,9 +38,21 @@ function createSongCard (song) {
     moreInfo.textContent = "More Info >>"
     moreInfo.addEventListener("click", () => console.log("clicked"))
 
-    card.append(image, h3, h4, bandLikeBtn, songLikeBtn, addToQueueBtn, moreInfo)
+    let queueSpan = document.createElement("span")
+    let songSpan = document.createElement("span")
+    let bandSpan = document.createElement("span")
+    
+    queueSpan.appendChild(addToQueueBtn)
+    songSpan.appendChild(songLikeBtn)
+    bandSpan.appendChild(bandLikeBtn)
+    bandNameDiv.append()
+    card.append(image, h4, h3, bandSpan, songSpan, queueSpan, moreInfo)
     document.querySelector(".song-scroller").append(card)
 }
+
+// Event Listener Functions
+//===========================================================
+
 
 // Fetches
 //===========================================================
