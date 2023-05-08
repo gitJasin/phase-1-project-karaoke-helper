@@ -69,9 +69,10 @@ function displayMoreSongInfo (song) {
 
 function displaySongQueue (song) {
     let span = document.createElement("span")
-    span.textContent = `${song.song} - ${song.band}  `
+    span.textContent = `${song.song} - ${song.band} -   `
 
-    let li = document.createElement("li")
+    let fieldset = document.createElement("fieldset")
+    fieldset.classList.add("queue-fieldset")
 
     let deleteBtn = document.createElement("button")
     deleteBtn.classList.add("delete-btn")
@@ -83,8 +84,8 @@ function displaySongQueue (song) {
     })
 
     span.appendChild(deleteBtn)
-    li.appendChild(span) 
-    document.querySelector(".song-queue").appendChild(li)
+    fieldset.appendChild(span) 
+    document.querySelector(".song-queue").appendChild(fieldset)
 }
 
 // Fetches

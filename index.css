@@ -98,10 +98,6 @@ button:focus, button:hover {
     box-shadow: var(--shadow-4)
 }
 
-.delete-btn {
-    align-content: flex-end;
-
-}
 /* Thanks to:
 [Kevin Powell]. Create a horizontal media scroller with CSS [Video]. Youtube. https://youtu.be/3yfswsnD2sw
 for the song scroller css
