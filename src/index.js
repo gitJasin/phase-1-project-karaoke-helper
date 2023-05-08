@@ -37,17 +37,17 @@ function createSongCard (song) {
     moreInfo.textContent = "More Info >>"
     moreInfo.addEventListener("click", () => displayMoreSongInfo(song))
 
-    // let queueSpan = document.createElement("span")
     let songSpan = document.createElement("span")
     let bandSpan = document.createElement("span")
     
-    // queueSpan.appendChild(addToQueueBtn)
     songSpan.appendChild(songLikeBtn)
     bandSpan.appendChild(bandLikeBtn)
     card.append(image, bandP, bandSpan, songP, songSpan, addToQueueBtn, moreInfo)
     document.querySelector(".song-scroller").append(card)
 }
 
+// Event Listener Functions
+//===========================================================
 function displayMoreSongInfo (song) {
     let showbandName = document.querySelector(".band-name")
     showbandName.classList.add("show-band-name")
@@ -83,12 +83,9 @@ function displaySongQueue (song) {
     })
 
     span.appendChild(deleteBtn)
-    li.appendChild(span)
+    li.appendChild(span) 
     document.querySelector(".song-queue").appendChild(li)
 }
-
-// Event Listener Functions
-//===========================================================
 
 // Fetches
 //===========================================================
