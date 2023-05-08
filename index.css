@@ -106,6 +106,10 @@ form {
     width: 300px;
 }
 
+form h4 {
+    text-align: center;
+}
+
 input,
 textarea {
     font-size: 1rem;
