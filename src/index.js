@@ -19,12 +19,12 @@ function createSongCard (song) {
 
     let bandLikeBtn = document.createElement("button")
     bandLikeBtn.classList.add("buttons")
-    bandLikeBtn.textContent = "Like Band ❤️"
+    bandLikeBtn.textContent = "Like ❤️"
     bandLikeBtn.addEventListener("click", () => console.log("clicked"))
 
     let songLikeBtn = document.createElement("button")
     songLikeBtn.classList.add("buttons")
-    songLikeBtn.textContent = "Like Song ❤️"
+    songLikeBtn.textContent = "Like ❤️"
     songLikeBtn.addEventListener("click", () => console.log("clicked"))
 
     let addToQueueBtn = document.createElement("button")
@@ -75,6 +75,7 @@ function displaySongQueue (song) {
 
     let deleteBtn = document.createElement("button")
     deleteBtn.classList.add("delete-btn")
+    deleteBtn.classList.add("button")
     deleteBtn.textContent = "🗑️"
     deleteBtn.addEventListener("click", (e) => {
         if (confirm("Are you sure you want to remove this song from the queue"))
