@@ -5,8 +5,8 @@
 @use postcss-preset-env;
 
 .song-card {
-flex-basis: var(--size-content);
 display: flex;
+flex-basis: var(--size-content);
 flex-direction: column;
 gap: var(--size-2);
 background: var(--surface-3);
@@ -26,7 +26,6 @@ box-shadow: var(--shadow-4)
     border: none;
     padding: 4px 8px;
     border-radius: 50px;
-
     font-weight: 600;
     color: var(--lime-5);
     background-color: var(--blue-8);
@@ -55,6 +54,26 @@ button:focus, button:hover {
     font-weight: 500;
     color: var(--gray-4);
 }
+
+.song-detals-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5vh;
+}
+
+#song-details {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: fit-content;
+    background: var(--surface-3);
+    border: 1px solid var(--surface-1);
+    padding: var(--size-4);
+    border-radius: var(--radius-3);
+    box-shadow: var(--shadow-4)
+}
+
 /* Thanks to:
 [Kevin Powell]. Create a horizontal media scroller with CSS [Video]. Youtube. https://youtu.be/3yfswsnD2sw
 for the song scroller css

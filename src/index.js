@@ -85,6 +85,7 @@ function displaySongQueue (song) {
     li.appendChild(span)
     document.querySelector(".song-queue").appendChild(li)
 }
+
 // Event Listener Functions
 //===========================================================
 
