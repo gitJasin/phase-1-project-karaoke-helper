@@ -48,8 +48,8 @@ box-shadow: var(--shadow-4)
 
 .buttons {
     border: none;
-    padding: 4px 8px;
-    border-radius: 50px;
+    padding: 5px 8px;
+    border-radius: 25px;
     font-weight: 600;
     color: var(--lime-5);
     background-color: var(--blue-8);
@@ -97,6 +97,38 @@ button:focus, button:hover {
     border-radius: var(--radius-3);
     box-shadow: var(--shadow-4)
 }
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem;
+    width: 300px;
+}
+
+input,
+textarea {
+    font-size: 1rem;
+    font-weight: 800;
+    letter-spacing: var(--font-letterspacing-3);
+    background-color: var(--blue-9);
+    color: var(--gray-3);
+    border: 1px solid var(--black-8);
+    padding: .5rem;
+    margin: .25rem 0;
+    width: 100%; 
+ 
+}
+
+footer img {
+    background-size: cover;
+    width: 100%;
+    height: 500px;
+    border: 1px solid var(--black-8);
+    box-shadow: var(--shadow-4);
+    background-image: url("https://c0.wallpaperflare.com/preview/92/251/615/guitar-music-rock-skull.jpg");
+}
+
 
 /* Thanks to:
 [Kevin Powell]. Create a horizontal media scroller with CSS [Video]. Youtube. https://youtu.be/3yfswsnD2sw

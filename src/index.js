@@ -46,6 +46,10 @@ function createSongCard (song) {
     document.querySelector(".song-scroller").append(card)
 }
 
+function newSongForm () {
+
+}
+
 // Event Listener Functions
 //===========================================================
 function displayMoreSongInfo (song) {
@@ -72,7 +76,7 @@ function displaySongQueue (song) {
     span.textContent = `${song.song} - ${song.band} -   `
 
     let fieldset = document.createElement("fieldset")
-    fieldset.classList.add("queue-fieldset")
+    fieldset.classList.add("song-card")
 
     let deleteBtn = document.createElement("button")
     deleteBtn.classList.add("delete-btn")
