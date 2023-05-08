@@ -74,8 +74,13 @@ function displaySongQueue (song) {
     let li = document.createElement("li")
 
     let deleteBtn = document.createElement("button")
-    deleteBtn.innerHTML = "🗑️"
-    
+    deleteBtn.classList.add("delete-btn")
+    deleteBtn.textContent = "🗑️"
+    deleteBtn.addEventListener("click", (e) => {
+        if (confirm("Are you sure you want to remove this song from the queue"))
+            e.target.parentNode.parentNode.remove()
+    })
+
     span.appendChild(deleteBtn)
     li.appendChild(span)
     document.querySelector(".song-queue").appendChild(li)
