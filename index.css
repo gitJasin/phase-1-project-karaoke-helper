@@ -124,6 +124,17 @@ textarea {
  
 }
 
+.section-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; 
+  }
+  
+  section {
+    flex-basis: calc(28% - 20px); 
+    margin-bottom: 20px; 
+  }
+
 footer img {
     background-size: cover;
     width: 100%;
