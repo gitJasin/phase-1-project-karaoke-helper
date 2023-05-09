@@ -65,7 +65,7 @@ function displayMoreSongInfo (song) {
     showSongVideo.classList.add("show-song-video")
     showSongVideo.src = song.video
     
-    let showLyricsLink = document.querySelector(".song-lyrics")
+    let showLyricsLink = document.querySelector("#song-lyrics")
     showLyricsLink.classList.add("show-lyrics-link")
     showLyricsLink.setAttribute("href", song.lyrics)
     // showLyricsLink.textContent = song.lyrics
