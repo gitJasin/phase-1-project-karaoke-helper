@@ -11,10 +11,10 @@ function createSongCard (song) {
 
     let songP = document.createElement("p")
     songP.classList.add("song=p")
-    songP.textContent = song.song
+    songP.textContent = `${song.song} - Song Likes: ${song.songLikes}`
 
     let bandP = document.createElement("p")
-    bandP.textContent = song.band
+    bandP.textContent = `${song.band} - Band Likes: ${song.bandLikes}`
     bandP.classList.add("band-p")
 
     let bandLikeBtn = document.createElement("button")
