@@ -109,6 +109,8 @@ function handleSubmit (e) {
     }
     createSongCard(songObj)
     addNewSong(songObj)
+
+    e.target.reset()
 }
 
 // Fetches
