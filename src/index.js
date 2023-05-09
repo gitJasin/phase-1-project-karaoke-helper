@@ -158,7 +158,7 @@ function updatSongLikes (song, songP) {
         })
     })
     .then(res => res.json())
-    .then(updatedSong => songP.textContent = `${updatedSong.band} - Song Likes: ${song.songLikes}`)
+    .then(updatedSong => songP.textContent = `${updatedSong.song} - Song Likes: ${song.songLikes}`)
 }
 // Initial Render
 //===========================================================
