@@ -6,7 +6,7 @@
       "band": "Radiohead",
       "bandImage": "https://upload.wikimedia.org/wikipedia/en/5/55/Radioheadthebends.png",
       "songLikes": 0,
-      "bandLikes": 0,
+      "bandLikes": 2,
       "video": "https://www.youtube.com/embed/1uYWYWPc9HU",
       "lyrics": "https://www.azlyrics.com/lyrics/radiohead/karmapolice.html"
     },
@@ -16,7 +16,7 @@
       "band": "Snoop Dogg",
       "bandImage": "https://upload.wikimedia.org/wikipedia/commons/1/17/Snoop_Dogg_2019_by_Glenn_Francis.jpg",
       "songLikes": 0,
-      "bandLikes": 0,
+      "bandLikes": 1,
       "video": "https://www.youtube.com/embed/2soGJXQAQec",
       "lyrics": "https://www.azlyrics.com/lyrics/snoopdogg/whoamiwhatsmyname.html"
     },
@@ -26,7 +26,7 @@
       "band": "Queen",
       "bandImage": "https://upload.wikimedia.org/wikipedia/commons/3/33/Queen_%E2%80%93_montagem_%E2%80%93_new.png",
       "songLikes": 0,
-      "bandLikes": 0,
+      "bandLikes": 3,
       "video": "https://youtube.com/embed/fJ9rUzIMcZQ",
       "lyrics": "https://www.azlyrics.com/lyrics/queen/bohemianrhapsody.html"
     },
@@ -36,9 +36,10 @@
       "band": "Weezer",
       "bandImage": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Weezer_Bethlehem_2019_1.jpg",
       "songLikes": 0,
-      "bandLikes": 0,
+      "bandLikes": 3,
       "video": "https://youtube.com/embed/LHQqqM5sr7g",
-      "lyrics": "https://www.azlyrics.com/lyrics/weezer/undonethesweatersong.html"
+      "lyrics": "https://www.azlyrics.com/lyrics/weezer/undonethesweatersong.html",
+      "bandLIkes": null
     },
     {
       "id": 5,
@@ -46,7 +47,7 @@
       "band": "The Beatles",
       "bandImage": "https://upload.wikimedia.org/wikipedia/commons/d/df/The_Fabs.JPG",
       "songLikes": 0,
-      "bandLikes": 0,
+      "bandLikes": 1,
       "video": "https://youtube.com/embed/_7xMfIp-irg",
       "lyrics": "https://www.azlyrics.com/lyrics/beatles/allyouneedislove.html"
     },
@@ -57,7 +58,7 @@
       "video": "https://www.youtube.com/embed/G9M3GVejHNE",
       "lyrics": "https://www.azlyrics.com/lyrics/ween/freedomof76.html",
       "songLikes": 0,
-      "bandLikes": 0,
+      "bandLikes": 6,
       "id": 6
     },
     {
@@ -67,7 +68,7 @@
       "video": "https://www.youtube.com/embed/1k8craCGpgs",
       "lyrics": "https://www.azlyrics.com/lyrics/journey/dontstopbelievin.html",
       "songLikes": 0,
-      "bandLikes": 0,
+      "bandLikes": 3,
       "id": 7
     }
   ]

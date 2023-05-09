@@ -10,7 +10,7 @@ function createSongCard (song) {
     image.src = song.bandImage
 
     let songP = document.createElement("p")
-    songP.classList.add("song=p")
+    songP.classList.add("song-p")
     songP.textContent = `${song.song} - Song Likes: ${song.songLikes}`
 
     let bandP = document.createElement("p")
@@ -20,12 +20,12 @@ function createSongCard (song) {
     let bandLikeBtn = document.createElement("button")
     bandLikeBtn.classList.add("buttons")
     bandLikeBtn.textContent = "Like ❤️"
-    bandLikeBtn.addEventListener("click", () => console.log("clicked"))
+    bandLikeBtn.addEventListener("click", () => updateBandLikes(song, bandP))
 
     let songLikeBtn = document.createElement("button")
     songLikeBtn.classList.add("buttons")
     songLikeBtn.textContent = "Like ❤️"
-    songLikeBtn.addEventListener("click", () => console.log("clicked"))
+    songLikeBtn.addEventListener("click", () => updatSongLikes(song, songP))
 
     let addToQueueBtn = document.createElement("button")
     addToQueueBtn.classList.add("buttons")
@@ -133,6 +133,33 @@ function addNewSong (songObj) {
     .then(song => console.log(song))
 }
 
+function updateBandLikes (song, bandP) {
+    fetch(`http://localhost:3000/songs/${song.id}`, {
+        method: "PATCH",
+        headers: {
+            "Content-type": "application/json"
+        },
+        body: JSON.stringify({
+            "bandLikes": song.bandLikes += 1
+        })
+    })
+    .then(res => res.json())
+    .then(updatedSong => bandP.textContent = `${updatedSong.band} - Band Likes: ${song.bandLikes}`)
+}  
+
+function updatSongLikes (song, songP) {
+    fetch(`http://localhost:3000/songs/${song.id}`, {
+        method: "PATCH",
+        headers: {
+            "Content-type": "application/json"
+        },
+        body: JSON.stringify({
+            "songLikes": song.songLikes += 1
+        })
+    })
+    .then(res => res.json())
+    .then(updatedSong => songP.textContent = `${updatedSong.band} - Song Likes: ${song.songLikes}`)
+}
 // Initial Render
 //===========================================================
 function intialize () {
