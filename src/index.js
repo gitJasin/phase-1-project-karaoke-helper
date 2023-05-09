@@ -94,15 +94,19 @@ function displaySongQueue (song) {
 
 // Event Listeners
 //===========================================================
-document.querySelector(".new-song-fomr").addEventListener("submit", handleSubmit)
+document.querySelector("#new-song-form").addEventListener("submit", handleSubmit)
 
 // Event Handlers
 //===========================================================
 function handleSubmit (e) {
     e.preventDefault()
 
-    let songObj = Object.fromEntries(new FormData(e.target))
-
+    let formData = Object.fromEntries(new FormData(e.target))
+    let songObj = {
+        ...formData,
+        songLikes: 0,
+        bandLikes: 0
+    }
     createSongCard(songObj)
     addNewSong(songObj)
 }
@@ -115,17 +119,16 @@ function getAllSongs () {
     .then(songs => songs.forEach(song => createSongCard(song)))
 }
 
-function addNewSong (song) {
+function addNewSong (songObj) {
     fetch("http://localhost:3000/songs", {
         method: "POST",
         headers: {
-            "Container-Type": "application/json",
-            "Accept": "application/json" 
+            "Content-Type": "application/json",
         },
-        body: JSON.stringify(song)
+        body: JSON.stringify(songObj)
     })
-        .then(res => res.json())
-        .then(newSong => createSongCard(newSong))
+    .then(res => res.json())
+    .then(song => console.log(song))
 }
 
 // Initial Render

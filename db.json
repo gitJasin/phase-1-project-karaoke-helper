@@ -1,56 +1,64 @@
 {
-    "songs": [
-        {
-            "id": 1,
-            "song": "Karma Police",
-            "band": "Radiohead",
-            "bandImage": "https://upload.wikimedia.org/wikipedia/en/5/55/Radioheadthebends.png",
-            "songLikes": 0,
-            "bandLikes": 0,
-            "video": "https://www.youtube.com/embed/1uYWYWPc9HU",
-            "lyrics": "https://www.azlyrics.com/lyrics/radiohead/karmapolice.html"
-
-        },
-        {   
-            "id": 2,
-            "song": "Who Am I (What's My Name)", 
-            "band": "Snoop Dogg",
-            "bandImage": "https://upload.wikimedia.org/wikipedia/commons/1/17/Snoop_Dogg_2019_by_Glenn_Francis.jpg",
-            "songLikes": 0,
-            "bandLikes": 0,
-            "video": "https://www.youtube.com/embed/2soGJXQAQec",
-            "lyrics": "https://www.azlyrics.com/lyrics/snoopdogg/whoamiwhatsmyname.html"
-        },
-        {
-            "id": 3,
-            "song": "Bohemian Rhapsody",
-            "band": "Queen",
-            "bandImage": "https://upload.wikimedia.org/wikipedia/commons/3/33/Queen_%E2%80%93_montagem_%E2%80%93_new.png",
-            "songLikes": 0,
-            "bandLikes": 0,
-            "video": "https://youtube.com/embed/fJ9rUzIMcZQ",
-            "lyrics": "https://www.azlyrics.com/lyrics/queen/bohemianrhapsody.html"
-        },
-        {   
-            "id": 4,
-            "song": "Undone (The Sweater Song)",
-            "band": "Weezer",
-            "bandImage": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Weezer_Bethlehem_2019_1.jpg",
-            "songLikes": 0,
-            "bandLikes": 0,
-            "video": "https://youtube.com/embed/LHQqqM5sr7g",
-            "lyrics": "https://www.azlyrics.com/lyrics/weezer/undonethesweatersong.html"
-            
-        },
-        {
-            "id": 5,
-            "song": "All You Need Is Love",
-            "band": "The Beatles",
-            "bandImage": "https://upload.wikimedia.org/wikipedia/commons/d/df/The_Fabs.JPG",
-            "songLikes": 0,
-            "bandLikes": 0,
-            "video": "https://youtube.com/embed/_7xMfIp-irg",
-            "lyrics": "https://www.azlyrics.com/lyrics/beatles/allyouneedislove.html"
-        }
-    ]
+  "songs": [
+    {
+      "id": 1,
+      "song": "Karma Police",
+      "band": "Radiohead",
+      "bandImage": "https://upload.wikimedia.org/wikipedia/en/5/55/Radioheadthebends.png",
+      "songLikes": 0,
+      "bandLikes": 0,
+      "video": "https://www.youtube.com/embed/1uYWYWPc9HU",
+      "lyrics": "https://www.azlyrics.com/lyrics/radiohead/karmapolice.html"
+    },
+    {
+      "id": 2,
+      "song": "Who Am I (What's My Name)",
+      "band": "Snoop Dogg",
+      "bandImage": "https://upload.wikimedia.org/wikipedia/commons/1/17/Snoop_Dogg_2019_by_Glenn_Francis.jpg",
+      "songLikes": 0,
+      "bandLikes": 0,
+      "video": "https://www.youtube.com/embed/2soGJXQAQec",
+      "lyrics": "https://www.azlyrics.com/lyrics/snoopdogg/whoamiwhatsmyname.html"
+    },
+    {
+      "id": 3,
+      "song": "Bohemian Rhapsody",
+      "band": "Queen",
+      "bandImage": "https://upload.wikimedia.org/wikipedia/commons/3/33/Queen_%E2%80%93_montagem_%E2%80%93_new.png",
+      "songLikes": 0,
+      "bandLikes": 0,
+      "video": "https://youtube.com/embed/fJ9rUzIMcZQ",
+      "lyrics": "https://www.azlyrics.com/lyrics/queen/bohemianrhapsody.html"
+    },
+    {
+      "id": 4,
+      "song": "Undone (The Sweater Song)",
+      "band": "Weezer",
+      "bandImage": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Weezer_Bethlehem_2019_1.jpg",
+      "songLikes": 0,
+      "bandLikes": 0,
+      "video": "https://youtube.com/embed/LHQqqM5sr7g",
+      "lyrics": "https://www.azlyrics.com/lyrics/weezer/undonethesweatersong.html"
+    },
+    {
+      "id": 5,
+      "song": "All You Need Is Love",
+      "band": "The Beatles",
+      "bandImage": "https://upload.wikimedia.org/wikipedia/commons/d/df/The_Fabs.JPG",
+      "songLikes": 0,
+      "bandLikes": 0,
+      "video": "https://youtube.com/embed/_7xMfIp-irg",
+      "lyrics": "https://www.azlyrics.com/lyrics/beatles/allyouneedislove.html"
+    },
+    {
+      "song": "Freedom of '76",
+      "band": "Ween",
+      "bandImage": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Ween_at_Ryman_Auditorium%2C_Nashville_10.16.2018.jpg",
+      "video": "https://www.youtube.com/embed/G9M3GVejHNE",
+      "lyrics": "https://www.azlyrics.com/lyrics/ween/freedomof76.html",
+      "songLikes": 0,
+      "bandLikes": 0,
+      "id": 6
+    }
+  ]
 }
