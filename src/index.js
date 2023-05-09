@@ -46,9 +46,9 @@ function createSongCard (song) {
     document.querySelector(".song-scroller").append(card)
 }
 
-function newSongForm () {
+// function newSongForm () {
 
-}
+// }
 
 // Event Listener Functions
 //===========================================================
@@ -92,6 +92,21 @@ function displaySongQueue (song) {
     document.querySelector(".song-queue").appendChild(fieldset)
 }
 
+// Event Listeners
+//===========================================================
+document.querySelector(".new-song-fomr").addEventListener("submit", handleSubmit)
+
+// Event Handlers
+//===========================================================
+function handleSubmit (e) {
+    e.preventDefault()
+
+    let songObj = Object.fromEntries(new FormData(e.target))
+
+    createSongCard(songObj)
+    addNewSong(songObj)
+}
+
 // Fetches
 //===========================================================
 function getAllSongs () {
@@ -100,10 +115,22 @@ function getAllSongs () {
     .then(songs => songs.forEach(song => createSongCard(song)))
 }
 
+function addNewSong (song) {
+    fetch("http://localhost:3000/songs", {
+        method: "POST",
+        headers: {
+            "Container-Type": "application/json",
+            "Accept": "application/json" 
+        },
+        body: JSON.stringify(song)
+    })
+        .then(res => res.json())
+        .then(newSong => createSongCard(newSong))
+}
+
 // Initial Render
 //===========================================================
 function intialize () {
-    // getAllBandNames()
     getAllSongs()
 }
 intialize()

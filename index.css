@@ -121,7 +121,7 @@ form h4 {
 
 input,
 textarea {
-    font-size: 1rem;
+    font-size: .75rem;
     font-weight: 800;
     letter-spacing: var(--font-letterspacing-3);
     background-color: var(--blue-9);
@@ -131,6 +131,10 @@ textarea {
     margin: .25rem 0;
     width: 100%; 
  
+}
+input text
+::placeholder {
+    font-size: var(--font-size-1);
 }
 
 .section-wrapper {
