@@ -107,7 +107,7 @@ function handleSubmit (e) {
     }
     createSongCard(songObj)
     addNewSong(songObj)
-
+    
     e.target.reset()
 }
 
@@ -131,7 +131,7 @@ function addNewSong (songObj) {
         body: JSON.stringify(songObj)
     })
     .then(res => res.json())
-    .then(song => console.log(song))
+    // .then(songs => sortSongCardsByBandName(songs))
 }
 
 function updateBandLikes (song, bandP) {
