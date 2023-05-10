@@ -107,7 +107,6 @@ function handleSubmit (e) {
     }
     createSongCard(songObj)
     addNewSong(songObj)
-    
     e.target.reset()
 }
 
@@ -117,8 +116,9 @@ function getAllSongs () {
     fetch("http://localhost:3000/songs")
     .then(res => res.json())
     .then(songs => {
-        sortSongCardsByBandName(songs)
         sortTop3SongLikes(songs)
+        sortTop3BandLikes(songs)
+        sortSongCardsByBandName(songs)
         songs.forEach(song => createSongCard(song))
     })
 }
@@ -146,7 +146,7 @@ function updateBandLikes (song, bandP) {
         })
     })
     .then(res => res.json())
-    .then(updatedSong => bandP.textContent = `${updatedSong.band} - Band Likes: ${song.bandLikes}`)
+    .then(updatedSong => bandP.textContent = `${updatedSong.band} - Band Likes: ${updatedSong.bandLikes}`)
 }  
 
 function updatSongLikes (song, songP) {
@@ -160,13 +160,15 @@ function updatSongLikes (song, songP) {
         })
     })
     .then(res => res.json())
-    .then(updatedSong => songP.textContent = `${updatedSong.song} - Song Likes: ${song.songLikes}`)
+    .then(updatedSong => songP.textContent = `${updatedSong.song} - Song Likes: ${updatedSong.songLikes}`)
 }
 
 // Sort Functions
 //===========================================================
 function sortSongCardsByBandName (songs) {
-    songs.sort((a, b) => a.band.localeCompare(b.band))
+    console.log("Before", songs)
+    const sortedSongs = songs.sort((a, b) => a.band.localeCompare(b.band))
+    console.log("After", sortedSongs)
 }
 
 function sortTop3SongLikes (songs) {
@@ -179,6 +181,15 @@ function sortTop3SongLikes (songs) {
     })
 }
 
+function sortTop3BandLikes (songs) {
+    const sortedBandLikes = songs.sort((a, b) => b.bandLikes - a.bandLikes)
+    const top3Bands = sortedBandLikes.slice(0, 3)
+    top3Bands.forEach(song => {
+        let li = document.createElement("li")
+        li.textContent = `${song.band} - Likes: ${song.bandLikes}`
+        document.querySelector(".top-three-bands").appendChild(li)
+    })
+}
 // Initial Render
 //===========================================================
 function intialize () {
