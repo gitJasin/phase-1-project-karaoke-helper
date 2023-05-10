@@ -66,3 +66,7 @@ https://www.figma.com/file/QeqSij0yyMkMVw4AwKzQki/Karaoke-Helper-Organization?ty
 ## Sources:
 - CSS styling of card-scroller: 
   - [Kevin Powell]. Create a horizontal media scroller with CSS [Video]. Youtube. https://youtu.be/3yfswsnD2sw
+
+- videos linked are from youtube
+- images are from Wikipedia 
+- song lyrics are linked to azlyrics.com
