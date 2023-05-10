@@ -146,7 +146,8 @@ function updateBandLikes (song, bandP) {
         })
     })
     .then(res => res.json())
-    .then(updatedSong => bandP.textContent = `${updatedSong.band} - Band Likes: ${updatedSong.bandLikes}`)
+    .then(updatedSong =>
+        bandP.textContent = `${updatedSong.band} - Band Likes: ${updatedSong.bandLikes}`)
 }  
 
 function updatSongLikes (song, songP) {
@@ -174,7 +175,7 @@ function sortSongCardsByBandName (songs) {
 function sortTop3SongLikes (songs) {
     const sortedSongLikes = songs.sort((a, b) => b.songLikes - a.songLikes)
     const top3Songs = sortedSongLikes.slice(0, 3)
-    top3Songs.forEach(song => {
+     return top3Songs.forEach(song => {
         let li = document.createElement("li")
         li.textContent = `${song.band} - Likes: ${song.songLikes}`
         document.querySelector(".top-three-songs").appendChild(li)
@@ -184,7 +185,7 @@ function sortTop3SongLikes (songs) {
 function sortTop3BandLikes (songs) {
     const sortedBandLikes = songs.sort((a, b) => b.bandLikes - a.bandLikes)
     const top3Bands = sortedBandLikes.slice(0, 3)
-    top3Bands.forEach(song => {
+    return top3Bands.forEach(song => {
         let li = document.createElement("li")
         li.textContent = `${song.band} - Likes: ${song.bandLikes}`
         document.querySelector(".top-three-bands").appendChild(li)

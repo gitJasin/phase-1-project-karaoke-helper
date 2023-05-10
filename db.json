@@ -36,7 +36,7 @@
       "band": "Weezer",
       "bandImage": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Weezer_Bethlehem_2019_1.jpg",
       "songLikes": 4,
-      "bandLikes": 4,
+      "bandLikes": 5,
       "video": "https://youtube.com/embed/LHQqqM5sr7g",
       "lyrics": "https://www.azlyrics.com/lyrics/weezer/undonethesweatersong.html",
       "bandLIkes": null
@@ -68,7 +68,7 @@
       "video": "https://www.youtube.com/embed/1k8craCGpgs",
       "lyrics": "https://www.azlyrics.com/lyrics/journey/dontstopbelievin.html",
       "songLikes": 10,
-      "bandLikes": 4,
+      "bandLikes": 7,
       "id": 7
     }
   ]
