@@ -46,9 +46,7 @@ function createSongCard (song) {
     document.querySelector(".song-scroller").append(card)
 }
 
-// function newSongForm () {
 
-// }
 
 // Event Listener Functions
 //===========================================================
@@ -118,7 +116,10 @@ function handleSubmit (e) {
 function getAllSongs () {
     fetch("http://localhost:3000/songs")
     .then(res => res.json())
-    .then(songs => songs.forEach(song => createSongCard(song)))
+    .then(songs => {
+        sortSongCardsByBandName(songs)
+        songs.forEach(song => createSongCard(song))
+    })
 }
 
 function addNewSong (songObj) {
@@ -160,6 +161,13 @@ function updatSongLikes (song, songP) {
     .then(res => res.json())
     .then(updatedSong => songP.textContent = `${updatedSong.song} - Song Likes: ${song.songLikes}`)
 }
+
+// Sort Functions
+//===========================================================
+function sortSongCardsByBandName (songs) {
+    songs.sort((a, b) => a.band.localeCompare(b.band))
+}
+
 // Initial Render
 //===========================================================
 function intialize () {
