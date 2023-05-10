@@ -27,10 +27,13 @@ Your project must implement at least one instance of array iteration using avail
 
 - Use 3 or more event listeners.
 
+## Link to my figma page outlining how I met MVPs and current goals wokring on for site
+https://www.figma.com/file/QeqSij0yyMkMVw4AwKzQki/Karaoke-Helper-Organization?type=whiteboard&node-id=0%3A1&t=aJmW3UGdNIHMwhy1-1
+
+
 ## User Stories
 
-- User will be able to search for an Artist and receive the following: 
-Artist name and songs available, 
+- User will be able to find a song via song scroller. Each song card in the scroller allows the user to click band and song like buttons, add song to sing queue, and click on more info
 
 - User will be able to select the song and see the lyrics and a youtube video of the song
 
@@ -40,15 +43,17 @@ Artist name and songs available,
 
 - User can like a song and/or artist and see how many likes an artist and or song has
 
+- User can see top 3 artists and songs
+
 ## Dream Features
 
 - Digitize entrire catalogue 
 
 - Make it social  
 
-- User can see a list of the top 5 most popular songs and artists
+- User can see a list of the top 3 most popular songs and artists - DONE
 
-- User can request song./ artist to be added to the catalog
+- User can request song./ artist to be added to the catalog - KINDA DONE
 
 - MC of the Karaoke can control the song queue rather than user
 
