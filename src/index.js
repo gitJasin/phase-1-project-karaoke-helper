@@ -118,6 +118,7 @@ function getAllSongs () {
     .then(res => res.json())
     .then(songs => {
         sortSongCardsByBandName(songs)
+        sortTop3SongLikes(songs)
         songs.forEach(song => createSongCard(song))
     })
 }
@@ -166,6 +167,16 @@ function updatSongLikes (song, songP) {
 //===========================================================
 function sortSongCardsByBandName (songs) {
     songs.sort((a, b) => a.band.localeCompare(b.band))
+}
+
+function sortTop3SongLikes (songs) {
+    const sortedSongLikes = songs.sort((a, b) => b.songLikes - a.songLikes)
+    const top3Songs = sortedSongLikes.slice(0, 3)
+    top3Songs.forEach(song => {
+        let li = document.createElement("li")
+        li.textContent = `${song.band} - Likes: ${song.songLikes}`
+        document.querySelector(".top-three-songs").appendChild(li)
+    })
 }
 
 // Initial Render
