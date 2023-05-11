@@ -116,9 +116,9 @@ function getAllSongs () {
     fetch("http://localhost:3000/songs")
     .then(res => res.json())
     .then(songs => {
-        sortTop3SongLikes(songs)
-        sortTop3BandLikes(songs)
+        // sortTop3BandLikes(songs)
         sortSongCardsByBandName(songs)
+        updateTop3Songs(songs)
         songs.forEach(song => createSongCard(song))
     })
 }
@@ -182,14 +182,14 @@ function sortSongCardsByBandName (songs) {
 function updateTop3Songs (song) {
     top3Songs.push(song)
     top3Songs.sort((a, b) => b.songLikes - a.songLikes)
-    top3Songs = sortedSongLikes.slice(0, 3)
+    top3Songs = top3Songs.slice(0, 3)
 
     const top3SongList = document.querySelector(".top-three-songs")
     top3SongList.textContent = ""
 
     top3Songs.forEach((song, index) => {
         let li = document.createElement("li")
-        li.textContent = `${index + 1} ${song.band} - Likes: ${song.songLikes}`
+        li.textContent = `${song.band} - Likes: ${song.songLikes}`
         top3SongList.appendChild(li)
     })
 }
