@@ -70,3 +70,12 @@ https://www.figma.com/file/QeqSij0yyMkMVw4AwKzQki/Karaoke-Helper-Organization?ty
 - videos linked are from youtube
 - images are from Wikipedia 
 - song lyrics are linked to azlyrics.com
+
+
+## Tried to set up "API" via github 
+
+I tried using https://victorscholz.medium.com/hosting-a-json-api-on-github-pages-47b402f72603
+It did not work for posting or patching as github won't allow that behaviour. Only allows static data to be hosted. It is very possible I did it incorectly as I am new here but I could not get it to work. 
+
+## Known Bugs
+- youtube videos not allowed to play via site as my backend is server-json so runnning localhost biz. Youtube does not like that. User is able to click the link and view the video but without hosting the site I can't find a way to get them to play.
