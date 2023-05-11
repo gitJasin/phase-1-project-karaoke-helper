@@ -162,25 +162,35 @@ function updateSongLikes (song, songP) {
         })
     })
     .then(res => res.json())
-    .then(updatedSong => songP.textContent = `${updatedSong.song} - Song Likes: ${updatedSong.songLikes}`)
+    .then(updatedSong => {
+        song.songLikes = updatedSong.songLikes
+        songP.textContent = `${updatedSong.song} - Song Likes: ${updatedSong.songLikes}`
+        updateTop3Songs(updatedSong)
+    })
 }
 
 // Sort Functions
 //===========================================================
+let top3Songs = []
+
 function sortSongCardsByBandName (songs) {
     console.log("Before", songs)
     const sortedSongs = songs.sort((a, b) => a.band.localeCompare(b.band))
     console.log("After", sortedSongs)
 }
 
-function sortTop3SongLikes (songs) {
-    const sortedSongLikes = songs.sort((a, b) => b.songLikes - a.songLikes)
-    const top3Songs = sortedSongLikes.slice(0, 3)
+function updateTop3Songs (song) {
+    top3Songs.push(song)
+    top3Songs.sort((a, b) => b.songLikes - a.songLikes)
+    top3Songs = sortedSongLikes.slice(0, 3)
 
-    top3Songs.forEach(song => {
+    const top3SongList = document.querySelector(".top-three-songs")
+    top3SongList.textContent = ""
+
+    top3Songs.forEach((song, index) => {
         let li = document.createElement("li")
-        li.textContent = `${song.band} - Likes: ${song.songLikes}`
-        document.querySelector(".top-three-songs").appendChild(li)
+        li.textContent = `${index + 1} ${song.band} - Likes: ${song.songLikes}`
+        top3SongList.appendChild(li)
     })
 }
 
