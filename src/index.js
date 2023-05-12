@@ -103,8 +103,9 @@ function handleSubmit (e) {
         songLikes: 0,
         bandLikes: 0
     }
-    createSongCard(songObj)
     addNewSong(songObj)
+    createSongCard(songObj)
+    
     sortSongCards()
     e.target.reset()
 }
@@ -130,6 +131,10 @@ function addNewSong (songObj) {
         },
         body: JSON.stringify(songObj)
     })
+        .then(res => res.json())
+        .then(newSong => {
+            songObj.id = newSong.id
+        })
 }
 
 function updateBandLikes (song, bandP) {
@@ -145,6 +150,7 @@ function updateBandLikes (song, bandP) {
     .then(res => res.json())
     .then(updatedSong => {
         bandP.textContent = `${updatedSong.band} - Band Likes: ${updatedSong.bandLikes}`
+        song.bandLikes = updatedSong.bandLikes
     })
 }  
 
@@ -159,7 +165,10 @@ function updateSongLikes (song, songP) {
         })
     })
     .then(res => res.json())
-    .then(updatedSong => songP.textContent = `${updatedSong.song} - Song Likes: ${updatedSong.songLikes}`)
+    .then(updatedSong => {
+        songP.textContent = `${updatedSong.song} - Song Likes: ${updatedSong.songLikes}`
+        song.songLikes = updatedSong.songLikes
+    })
 }
 
 // Sort Functions
