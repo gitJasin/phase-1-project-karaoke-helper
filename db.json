@@ -70,6 +70,16 @@
       "songLikes": 10,
       "bandLikes": 7,
       "id": 7
+    },
+    {
+      "song": "Space Oddity",
+      "band": "David Bowie",
+      "bandImage": "https://upload.wikimedia.org/wikipedia/commons/e/e8/David-Bowie_Chicago_2002-08-08_photoby_Adam-Bielawski-cropped.jpg",
+      "video": "https://www.youtube.com/embed/iYYRH4apXDo",
+      "lyrics": "https://www.azlyrics.com/lyrics/davidbowie/spaceoddity.html",
+      "songLikes": 0,
+      "bandLikes": 0,
+      "id": 8
     }
   ]
 }

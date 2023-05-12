@@ -73,7 +73,7 @@ https://www.figma.com/file/QeqSij0yyMkMVw4AwKzQki/Karaoke-Helper-Organization?ty
 
 
 ## Tried to set up "API" via github 
-
+I tried this so I could maybe get youtube videos to play
 I tried using https://victorscholz.medium.com/hosting-a-json-api-on-github-pages-47b402f72603
 It did not work for posting or patching as github won't allow that behaviour. Only allows static data to be hosted. It is very possible I did it incorectly as I am new here but I could not get it to work. 
 

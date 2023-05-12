@@ -4,7 +4,8 @@
 function createSongCard (song) {
     let card = document.createElement("div")
     card.classList.add("song-card")
-    
+    card.dataset.bandName = song.band
+
     let image = document.createElement("img")
     image.classList.add("band-image")
     image.src = song.bandImage
@@ -46,8 +47,6 @@ function createSongCard (song) {
     document.querySelector(".song-scroller").append(card)
 }
 
-
-
 // Event Listener Functions
 //===========================================================
 function displayMoreSongInfo (song) {
@@ -66,7 +65,6 @@ function displayMoreSongInfo (song) {
     let showLyricsLink = document.querySelector("#song-lyrics")
     showLyricsLink.classList.add("show-lyrics-link")
     showLyricsLink.setAttribute("href", song.lyrics)
-    // showLyricsLink.textContent = song.lyrics
 }
 
 function displaySongQueue (song) {
@@ -107,6 +105,7 @@ function handleSubmit (e) {
     }
     createSongCard(songObj)
     addNewSong(songObj)
+    sortSongCards()
     e.target.reset()
 }
 
@@ -118,7 +117,7 @@ function getAllSongs () {
     .then(songs => {
         sortTop3SongLikes(songs)
         sortTop3BandLikes(songs)
-        sortSongCardsByBandName(songs)
+        sortSongsByBandName(songs)
         songs.forEach(song => createSongCard(song))
     })
 }
@@ -131,8 +130,6 @@ function addNewSong (songObj) {
         },
         body: JSON.stringify(songObj)
     })
-    .then(res => res.json())
-    // .then(songs => sortSongCardsByBandName(songs))
 }
 
 function updateBandLikes (song, bandP) {
@@ -162,16 +159,14 @@ function updateSongLikes (song, songP) {
         })
     })
     .then(res => res.json())
-    .then(updatedSong =>
-        songP.textContent = `${updatedSong.song} - Song Likes: ${updatedSong.songLikes}`)
+    .then(updatedSong => songP.textContent = `${updatedSong.song} - Song Likes: ${updatedSong.songLikes}`)
 }
 
 // Sort Functions
 //===========================================================
-function sortSongCardsByBandName (songs) {
-    console.log("Before", songs)
+function sortSongsByBandName (songs) {
     const sortedSongs = songs.sort((a, b) => a.band.localeCompare(b.band))
-    console.log("After", sortedSongs)
+    return sortedSongs
 }
 
 function sortTop3SongLikes (songs) {
@@ -194,6 +189,13 @@ function sortTop3BandLikes (songs) {
         li.textContent = `${song.band} - Likes: ${song.bandLikes}`
         document.querySelector(".top-three-bands").appendChild(li)
     })
+}
+
+function sortSongCards () {
+    const songCards = Array.from(document.getElementsByClassName("song-card"))
+    
+    const sortedSongCards = songCards.sort((a, b) => a.dataset.bandName.localeCompare(b.dataset.bandName))
+    document.querySelector(".song-scroller").replaceChildren(...sortedSongCards)
 }
 // Initial Render
 //===========================================================
