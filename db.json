@@ -80,16 +80,6 @@
       "songLikes": 0,
       "bandLikes": 0,
       "id": 8
-    },
-    {
-      "song": "aaa",
-      "band": "aaad",
-      "bandImage": "fadsf",
-      "video": "fads",
-      "lyrics": "fasdf",
-      "songLikes": 1,
-      "bandLikes": 1,
-      "id": 9
     }
   ]
 }
