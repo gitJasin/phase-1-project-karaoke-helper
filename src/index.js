@@ -175,7 +175,7 @@ function sortTop3SongLikes (songs) {
 
     top3Songs.forEach(song => {
         let li = document.createElement("li")
-        li.textContent = `${song.song} - Likes: ${song.songLikes}`
+        li.textContent = `${song.song} - ${song.band} - Likes: ${song.songLikes}`
         document.querySelector(".top-three-songs").appendChild(li)
     })
 }
