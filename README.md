@@ -1,5 +1,7 @@
 # Welcome to Karaoke Helper!
 
+To make this work you will need to run json-server and watch the db.json file 
+
 ##### This is my phase-1 project for software development bootcamp at Flatiron School 2023. It is creating a Karaoke Helper. Below is a description of:
 - Context of the Work - general vision
 - Minimum Viable Product (MVP) Requirements, 
