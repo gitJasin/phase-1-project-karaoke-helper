@@ -103,9 +103,9 @@ function handleSubmit (e) {
         songLikes: 0,
         bandLikes: 0
     }
-    addNewSong(songObj)
-    createSongCard(songObj)
     
+    createSongCard(songObj)
+    addNewSong(songObj)
     sortSongCards()
     e.target.reset()
 }
